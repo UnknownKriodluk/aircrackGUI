@@ -11,3 +11,6 @@ GUI для AirCrack-ng
 
 ## Запуск
 python aircrackGUI_(version).py
+
+![Alt-текст](https://imgur.com/zK5MRco "Установка зависимостей при запуске")
+![Alt-текст](https://imgur.com/xmPUsvv "Приложение")
