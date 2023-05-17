@@ -5,4 +5,5 @@ GUI for AirCrack-ng
 Automatically saves the handshake to the specified file
 
 Supports linux distributions with these package managers: apt, dnf, yum, pacman
-# Tested on Manjaro 22.1.1
+
+# Tested on Manjaro 22.1.1 + Python 3.10.10
