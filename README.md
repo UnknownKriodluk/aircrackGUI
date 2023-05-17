@@ -1,4 +1,4 @@
-# wifihackgui
+# aircrack-ng GUI
 GUI for AirCrack-ng
 ONLY FOR LINUX
 
