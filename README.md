@@ -1,5 +1,6 @@
 # aircrack-ng GUI
 GUI для AirCrack-ng
+
 **ТОЛЬКО ДЛЯ LINUX**
 
 Автоматически сохраняет handshake в указанный файл
