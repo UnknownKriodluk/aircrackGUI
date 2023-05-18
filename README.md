@@ -12,4 +12,4 @@ GUI для AirCrack-ng
 ## Запуск
 python aircrackGUI_(version).py
 
-![Установка зависимостей после запуска программы](https://drive.google.com/file/d/1J6H5NDoLDfQMs2Q_SDFxcHKP686tTCXc/view?usp=share_link)
+![Установка зависимостей после запуска программы](https://github.com/UnknownKriodluk/aircrackGUI/blob/main/%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%BF%D1%80%D0%BE%D0%B3%D0%B8.png)
