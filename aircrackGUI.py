@@ -50,52 +50,40 @@ def is_pacman_available():
         return False
 
 def install_aircrack_ng():
+    system = platform.system()
+
     echofail = ""
     echo = "echo Установка зависимостей..."
-    if is_apt_available():
-        command = "sudo apt-get install -y aircrack-ng"
-    elif is_dnf_available():
-        command = "sudo dnf install -y aircrack-ng"
-    elif is_yum_available():
-        command = "sudo yum install -y aircrack-ng"
-    elif is_pacman_available():
-        command = "sudo pacman -S --noconfirm aircrack-ng"
-    else:
-        echofail = "echo Менеджер пакетов не определен или не поддерживается"
-    commands = [
-        echo,
-        command,
-        echofail
-    ]
-    command_string = ';'.join(commands)
-    process = subprocess.Popen(command_string, shell=True)
-    process.wait
-    time.sleep(3)
-    print("Подождите немного, программа запускается...")
-    time.sleep(2)
-    
-'''
-def install_aircrack_ng():
-    system = platform.system()
-    if system == "Linux":
-        package_manager = subprocess.check_output(['apt', 'dnf', 'yum', 'pacman']).decode().strip()
-        if package_manager == "/usr/bin/apt":
-            command = "sudo apt-get install -y aircrack-ng airmon-ng airodump-ng aireplay-ng"
-        elif package_manager == "/usr/bin/dnf" or package_manager == "/usr/bin/yum":
-            command = "sudo dnf install -y aircrack-ng airmon-ng airodump-ng aireplay-ng" if package_manager == "/usr/bin/dnf" else "sudo yum install -y aircrack-ng airmon-ng airodump-ng aireplay-ng"
-        elif package_manager == "/usr/bin/pacman":
-            command = "sudo pacman -S --noconfirm aircrack-ng airmon-ng airodump-ng aireplay-ng"
+    if system == "Windows":
+        print("Неподдерживаемая система: {system}. Программа работает только на MacOS и на Linux")
+    elif system == "Linux":
+        if is_apt_available():
+            command = "sudo apt-get install -y aircrack-ng"
+        elif is_dnf_available():
+            command = "sudo dnf install -y aircrack-ng"
+        elif is_yum_available():
+            command = "sudo yum install -y aircrack-ng"
+        elif is_pacman_available():
+            command = "sudo pacman -S --noconfirm aircrack-ng"
         else:
-            print("Unable to determine package manager.")
-            return
+            echofail = "echo Менеджер пакетов не определен или не поддерживается"
+        commands = [
+            echo,
+            command,
+            echofail
+        ]
+        command_string = ';'.join(commands)
+        process = subprocess.Popen(command_string, shell=True)
+        process.wait
+        time.sleep(3)
+        print("Подождите немного, программа запускается...")
+        time.sleep(2)
     elif system == "Darwin":
         command = "brew install aircrack-ng airmon-ng airodump-ng aireplay-ng"
     else:
         print(f"Неподдерживаемая система: {system}")
         return
-    echo = "Установка зависимостей..."
-    subprocess.Popen("{}; {}").format(echo, command)
-'''
+    
 def get_interface_list():
     result = subprocess.run(["iwconfig"], capture_output=True, text=True)
     interfaces = re.findall(r"(\w+)\s+IEEE", result.stdout)
