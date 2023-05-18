@@ -10,9 +10,9 @@ GUI для AirCrack-ng
 **Протестирован на Manjaro 22.1.1 + Python 3.10.10**
 
 ## Запуск
-### ВАЖНО!
+### Установка зависимостей
 python -m pip install tkinter subprocess os_sys re platform time
-
+### Запуск программы
 python aircrackGUI_(version).py
 
 ## Запрос на установку зависимостей после запуска  программы
