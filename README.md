@@ -18,4 +18,4 @@ python aircrackGUI_(version).py
 
 ## Программа
 
-![Программа]()
+![Программа](https://raw.githubusercontent.com/UnknownKriodluk/aircrackGUI/main/%D0%BF%D1%80%D0%BE%D0%B3%D0%B0.png)
