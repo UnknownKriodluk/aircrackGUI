@@ -19,7 +19,7 @@ sudo apt install python-tk
 ```
 ### Запуск программы
 ```bash
-python aircrackGUI_(version).py
+python aircrackGUI.py
 ```
 ## Запрос на установку зависимостей после запуска  программы
 
