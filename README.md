@@ -13,7 +13,10 @@ GUI для AirCrack-ng
 
 ## Запуск
 ### Установка зависимостей
-python -m pip install tkinter subprocess os_sys re platform time
+```bash
+python -m pip install os_sys
+sudo apt install python-tk
+```
 ### Запуск программы
 python aircrackGUI_(version).py
 
