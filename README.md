@@ -17,7 +17,14 @@ GUI для AirCrack-ng
 ### Установка зависимостей
 ```bash
 python -m pip install os_sys
-sudo apt install python-tk
+```
+**Debian-based (Ubuntu):**
+```bash
+sudo apt install python3-tk
+```
+**Arch-based (Manjaro):**
+```bash
+sudo pacman -S python3-tk
 ```
 ### Запуск программы
 ```bash
